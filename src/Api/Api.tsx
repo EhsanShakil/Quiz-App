@@ -1,6 +1,6 @@
-export const FetchApi = async () => {
+export const FetchApi = async (totalQuiz: number, level: string) => {
   const response = await fetch(
-    "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple"
+    `https://opentdb.com/api.php?amount=${totalQuiz}&category=18&difficulty=${level}&type=multiple`
   );
   const { results } = await response.json();
   return results;

@@ -5,7 +5,7 @@ import { FetchApi } from "./Api/Api";
 function App() {
   useEffect(() => {
     const data = async () => {
-      const questions = await FetchApi();
+      const questions = await FetchApi(10, "easy");
       console.log(questions);
     };
     data();
