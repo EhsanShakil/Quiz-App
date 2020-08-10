@@ -1,4 +1,9 @@
-export const FetchApi = async (totalQuiz: number, level: string) => {
+import { QuizTypes } from "../Types/Types";
+
+export const FetchApi = async (
+  totalQuiz: number,
+  level: string
+): Promise<QuizTypes[]> => {
   const response = await fetch(
     `https://opentdb.com/api.php?amount=${totalQuiz}&category=18&difficulty=${level}&type=multiple`
   );
