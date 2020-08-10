@@ -1,3 +1,7 @@
+## Live Demo URL:
+
+[Quiz App](http://quiz-app-project.surge.sh).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
