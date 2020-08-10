@@ -5,4 +5,5 @@ export type QuizTypes = {
   incorrect_answers: string[];
   question: string;
   type: string;
+  option: string[];
 };
