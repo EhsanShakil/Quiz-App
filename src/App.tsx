@@ -21,7 +21,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Quiz question={quiz[0].question} />
+      <Quiz question={quiz[0].question} options={quiz[0].option} />
     </div>
   );
 }
