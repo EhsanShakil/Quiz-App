@@ -22,7 +22,11 @@ function App() {
   }
   const handleChange = (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
-    setNumber(++number);
+    if (number !== quiz.length - 1) {
+      setNumber(++number);
+    } else {
+      alert("No More Quiz Left");
+    }
   };
   return (
     <div className="App">
