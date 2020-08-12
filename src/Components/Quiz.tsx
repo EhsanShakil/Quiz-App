@@ -12,7 +12,7 @@ const Quiz: React.FC<Props> = ({ question, options }) => {
       <h1>Quiz Application</h1>
       <h3>{question}</h3>
       <div>
-        {options.map((option, index) => (
+        {options.map((option: string, index: number) => (
           <div key={index}>
             <label>
               <input type="radio" name="option" value={option} />
