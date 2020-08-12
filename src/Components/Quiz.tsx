@@ -3,9 +3,10 @@ import React from "react";
 type Props = {
   question: string;
   options: string[];
+  callback: (e: React.FormEvent<EventTarget>) => void;
 };
 
-const Quiz: React.FC<Props> = ({ question, options }) => {
+const Quiz: React.FC<Props> = ({ question, options, callback }) => {
   console.log(question, options);
   return (
     <div>
@@ -21,6 +22,7 @@ const Quiz: React.FC<Props> = ({ question, options }) => {
           </div>
         ))}
       </div>
+      <button onClick={callback}>Click Me</button>
     </div>
   );
 };

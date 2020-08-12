@@ -6,6 +6,7 @@ import { QuizTypes } from "./Types/Types";
 
 function App() {
   const [quiz, setQuiz] = useState<QuizTypes[]>([]);
+  let [number, setNumber] = useState(0);
 
   useEffect(() => {
     const data = async () => {
@@ -19,9 +20,17 @@ function App() {
   if (!quiz.length) {
     return <h1>Loading...</h1>;
   }
+  const handleChange = (e: React.FormEvent<EventTarget>) => {
+    e.preventDefault();
+    setNumber(++number);
+  };
   return (
     <div className="App">
-      <Quiz question={quiz[0].question} options={quiz[0].option} />
+      <Quiz
+        question={quiz[number].question}
+        options={quiz[number].option}
+        callback={handleChange}
+      />
     </div>
   );
 }
