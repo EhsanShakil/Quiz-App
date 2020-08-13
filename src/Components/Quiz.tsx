@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {
   question: string;
   options: string[];
-  callback: (e: React.FormEvent<EventTarget>) => void;
+  callback: (e: React.FormEvent<EventTarget>, userAnswer: string) => void;
 };
 
 const Quiz: React.FC<Props> = ({ question, options, callback }) => {
-  console.log(question, options);
+  let [userAnswer, setUserAnswer] = useState("");
+
+  const handleChange = (e: any) => {
+    setUserAnswer(e.target.value);
+  };
+
   return (
     <div>
       <h1>Quiz Application</h1>
       <h3>{question}</h3>
-      <div>
-        {options.map((option: string, index: number) => (
-          <div key={index}>
-            <label>
-              <input type="radio" name="option" value={option} />
-              {option}
-            </label>
-          </div>
-        ))}
-      </div>
-      <button onClick={callback}>Click Me</button>
+      <form
+        onSubmit={(e: React.FormEvent<EventTarget>) => callback(e, userAnswer)}
+      >
+        <div>
+          {options.map((option: string, index: number) => (
+            <div key={index}>
+              <label>
+                <input
+                  required
+                  type="radio"
+                  name="option"
+                  value={option}
+                  checked={userAnswer === option}
+                  onChange={handleChange}
+                />
+                {option}
+              </label>
+            </div>
+          ))}
+        </div>
+        <button>Click Me</button>
+      </form>
     </div>
   );
 };

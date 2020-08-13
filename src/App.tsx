@@ -20,8 +20,12 @@ function App() {
   if (!quiz.length) {
     return <h1>Loading...</h1>;
   }
-  const handleChange = (e: React.FormEvent<EventTarget>) => {
+  const handleChange = (
+    e: React.FormEvent<EventTarget>,
+    userAnswer: string
+  ) => {
     e.preventDefault();
+    console.log(userAnswer);
     if (number !== quiz.length - 1) {
       setNumber(++number);
     } else {
