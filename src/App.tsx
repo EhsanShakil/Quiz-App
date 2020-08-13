@@ -7,6 +7,7 @@ import { QuizTypes } from "./Types/Types";
 function App() {
   const [quiz, setQuiz] = useState<QuizTypes[]>([]);
   let [number, setNumber] = useState(0);
+  let [score, setScore] = useState(0);
 
   useEffect(() => {
     const data = async () => {
@@ -26,10 +27,21 @@ function App() {
   ) => {
     e.preventDefault();
     console.log(userAnswer);
+
+    const currentQuestion = quiz[number];
+
+    if (userAnswer === currentQuestion.correct_answer) {
+      setScore(++score);
+    }
+
     if (number !== quiz.length - 1) {
       setNumber(++number);
     } else {
-      alert("No More Quiz Left");
+      alert(
+        "Quiz Completed Your Score is: " + score + " Out Of " + quiz.length
+      );
+      setNumber(0);
+      setScore(0);
     }
   };
   return (
