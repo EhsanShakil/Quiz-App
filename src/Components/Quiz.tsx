@@ -14,7 +14,7 @@ const Quiz: React.FC<Props> = ({ question, options, callback }) => {
   };
 
   return (
-    <div>
+    <div className="quiz-app">
       <h1>Quiz Application</h1>
       <h3>{question}</h3>
       <form
