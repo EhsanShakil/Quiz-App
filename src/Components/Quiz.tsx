@@ -37,7 +37,7 @@ const Quiz: React.FC<Props> = ({ question, options, callback }) => {
             </div>
           ))}
         </div>
-        <button>Click Me</button>
+        <button className="button">Click Me</button>
       </form>
     </div>
   );
