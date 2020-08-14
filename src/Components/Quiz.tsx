@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../App.css";
 type Props = {
   question: string;
   options: string[];
@@ -23,7 +23,7 @@ const Quiz: React.FC<Props> = ({ question, options, callback }) => {
         <div>
           {options.map((option: string, index: number) => (
             <div key={index}>
-              <label>
+              <label className="options">
                 <input
                   required
                   type="radio"
