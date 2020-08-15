@@ -9,26 +9,29 @@ body {
 .App {
   display: flex;
   justify-content: center;
+  margin: 30px;
 }
 .quiz-app {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   border-radius: 61px;
   background: #262323;
   box-shadow: inset 5px -5px 0px #0f0e0e, inset -5px 5px 0px #3d3838;
-  width: 1000px;
+  width: 1200px;
   height: 500px;
+  color: white;
 }
 .options {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 20px;
   width: 300px;
-  height: 25px;
+  height: 50px;
   margin-bottom: 10px;
 }
 .button {
@@ -41,10 +44,15 @@ body {
   display: flex;
   justify-content: center;
   margin: auto;
+  outline: none;
 }
 .result {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+.loading {
+  color: white;
 }
