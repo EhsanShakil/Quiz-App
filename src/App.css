@@ -1,3 +1,11 @@
+* {
+  background-color: #262323;
+}
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 .App {
   display: flex;
   justify-content: center;
@@ -7,6 +15,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 61px;
+  background: #262323;
+  box-shadow: inset 5px -5px 0px #0f0e0e, inset -5px 5px 0px #3d3838;
+  width: 1000px;
+  height: 500px;
 }
 .options {
   display: flex;
@@ -28,4 +41,10 @@
   display: flex;
   justify-content: center;
   margin: auto;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

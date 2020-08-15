@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const data = async () => {
-      const questions: QuizTypes[] = await FetchApi(10, "easy");
+      const questions: QuizTypes[] = await FetchApi(5, "easy");
       console.log(questions);
       setQuiz(questions);
     };
@@ -45,7 +45,7 @@ function App() {
   if (result) {
     return (
       <div className="result">
-        <h3>Result</h3>
+        <h1>Result</h1>
         <p>
           Your total score is {score} out of {quiz.length}
         </p>
