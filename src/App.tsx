@@ -8,6 +8,7 @@ function App() {
   const [quiz, setQuiz] = useState<QuizTypes[]>([]);
   let [number, setNumber] = useState(0);
   let [score, setScore] = useState(0);
+  let [result, setResult] = useState(false);
 
   useEffect(() => {
     const data = async () => {
@@ -37,13 +38,20 @@ function App() {
     if (number !== quiz.length - 1) {
       setNumber(++number);
     } else {
-      alert(
-        "Quiz Completed Your Score is: " + score + " Out Of " + quiz.length
-      );
-      setNumber(0);
-      setScore(0);
+      setResult(true);
     }
   };
+
+  if (result) {
+    return (
+      <div className="result">
+        <h3>Result</h3>
+        <p>
+          Your total score is {score} out of {quiz.length}
+        </p>
+      </div>
+    );
+  }
   return (
     <div className="App">
       <Quiz
