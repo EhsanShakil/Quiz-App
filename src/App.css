@@ -9,7 +9,10 @@ body {
 .App {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 50px;
+}
+.question {
+  text-align: center;
 }
 .quiz-app {
   display: flex;

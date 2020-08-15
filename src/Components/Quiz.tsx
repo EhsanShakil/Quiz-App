@@ -16,7 +16,7 @@ const Quiz: React.FC<Props> = ({ question, options, callback }) => {
   return (
     <div className="quiz-app">
       <h1>Quiz Application</h1>
-      <h3>{question}</h3>
+      <h3 className="question">{question}</h3>
       <form
         onSubmit={(e: React.FormEvent<EventTarget>) => callback(e, userAnswer)}
       >
