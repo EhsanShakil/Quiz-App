@@ -10,6 +10,9 @@ this.addEventListener("install", (event) => {
         "/static/js/0.chunk.js",
         "/static/js/bundle.js",
         "https://opentdb.com/api.php?amount=5&category=18&difficulty=easy&type=multiple",
+        "https://quiz-app-6301b.firebaseapp.com/",
+        "http://quiz-app-project.surge.sh/",
+        "https://quiz-app-6301b.web.app/",
       ]);
     })
   );
