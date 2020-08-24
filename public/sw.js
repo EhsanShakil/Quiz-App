@@ -9,7 +9,7 @@ this.addEventListener("install", (event) => {
         "/static/js/main.chunk.js",
         "/static/js/0.chunk.js",
         "/static/js/bundle.js",
-        "https://opentdb.com/api.php?amount=5&category=18&difficulty=easy&type=multiple",
+        "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
       ]);
     })
   );

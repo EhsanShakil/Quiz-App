@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const data = async () => {
-      const questions: QuizTypes[] = await FetchApi(5, "easy");
+      const questions: QuizTypes[] = await FetchApi();
       console.log(questions);
       setQuiz(questions);
     };
@@ -65,8 +65,6 @@ function App() {
       .then((result) => console.log("Token: ", result));
   } else if (Notification.permission === "denied") {
     messaging.requestPermission().catch((error) => console.log(error));
-  } else {
-    console.error("something went wrong");
   }
 
   return (
