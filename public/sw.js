@@ -1,4 +1,4 @@
-let cacheData = "Quiz-PWA";
+let cacheData = "QuizPWA";
 
 this.addEventListener("install", (event) => {
   event.waitUntil(
