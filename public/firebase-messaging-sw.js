@@ -4,13 +4,13 @@ importScripts(
 );
 
 var firebaseConfig = {
-  apiKey: "AIzaSyDqL09ZyVfcvsFaviGKnw0ez2k3YRn03fY",
-  authDomain: "pwa-push-notification-24166.firebaseapp.com",
-  databaseURL: "https://pwa-push-notification-24166.firebaseio.com",
-  projectId: "pwa-push-notification-24166",
-  storageBucket: "pwa-push-notification-24166.appspot.com",
-  messagingSenderId: "725486233878",
-  appId: "1:725486233878:web:26de147663ab723b86c837",
+  apiKey: "AIzaSyBv8Q4nlJHPskTvm_uAww8dtWShUbuHKzM",
+  authDomain: "quiz-app-23241.firebaseapp.com",
+  databaseURL: "https://quiz-app-23241.firebaseio.com",
+  projectId: "quiz-app-23241",
+  storageBucket: "quiz-app-23241.appspot.com",
+  messagingSenderId: "623350282586",
+  appId: "1:623350282586:web:dd7e3d619dc4b67117db63",
 };
 
 firebase.initializeApp(firebaseConfig);
