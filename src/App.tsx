@@ -3,6 +3,7 @@ import "./App.css";
 import { FetchApi } from "./Api/Api";
 import Quiz from "./Components/Quiz";
 import { QuizTypes } from "./Types/Types";
+import firebase from "./firebase";
 
 function App() {
   const [quiz, setQuiz] = useState<QuizTypes[]>([]);
@@ -52,6 +53,14 @@ function App() {
       </div>
     );
   }
+  const messaging = firebase.messaging();
+
+  messaging
+    .requestPermission()
+    .then(() => {
+      return messaging.getToken();
+    })
+    .then((result) => console.log("Token: ", result));
   return (
     <div className="App">
       <Quiz
