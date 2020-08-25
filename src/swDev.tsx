@@ -3,7 +3,7 @@ export function swDev() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register(url)
-      .then((response) => {
+      .then(() => {
         console.log("Service Worker registered.");
       })
       .catch((error) => {
