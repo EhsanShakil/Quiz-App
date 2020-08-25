@@ -55,17 +55,12 @@ function App() {
   }
   const messaging = firebase.messaging();
 
-  if (Notification.permission === "granted") {
-    messaging
-      .requestPermission()
-
-      .then(() => {
-        return messaging.getToken();
-      })
-      .then((result) => console.log("Token: ", result));
-  } else if (Notification.permission === "denied") {
-    messaging.requestPermission().catch((error) => console.log(error));
-  }
+  messaging
+    .requestPermission()
+    .then(() => {
+      return messaging.getToken();
+    })
+    .then((result) => console.log("Token: ", result));
 
   return (
     <div className="App">
